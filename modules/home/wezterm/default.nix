@@ -21,20 +21,20 @@
       color_scheme = "Tinacious Design (Dark)";
 
       enable_wayland = true;
-      window_decorations = "NONE";
-      window_close_confirmation = "NeverPrompt";
+      # window_decorations = "NONE";
+      # window_close_confirmation = "NeverPrompt";
 
-      cursor_blink_rate = 800;
-      cursor_thickness = 1;
-      default_cursor_style = "BlinkingBar";
+      # cursor_blink_rate = 800;
+      # cursor_thickness = 1;
+      # default_cursor_style = "BlinkingBar";
 
-      show_tabs_in_tab_bar = true;
-      use_fancy_tab_bar = false;
-      hide_tab_bar_if_only_one_tab = true;
+      # show_tabs_in_tab_bar = true;
+      # use_fancy_tab_bar = false;
+      # hide_tab_bar_if_only_one_tab = true;
 
-      scrollback_lines = 10000;
-      audible_bell = "Disabled";
-      hide_mouse_cursor_when_typing = true;
+      # scrollback_lines = 10000;
+      # audible_bell = "Disabled";
+      # hide_mouse_cursor_when_typing = true;
     };
   };
 }

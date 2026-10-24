@@ -1,9 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
+let
+  zed = inputs.chaotic.packages.${pkgs.stdenv.hostPlatform.system}.zed-editor_git;
+in
 {
   programs.zed-editor = {
     enable = true;
 
-    package = pkgs.zed-editor-fhs;
+    package = zed;
 
     # userKeymaps = import ./keymaps.nix {};
 

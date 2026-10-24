@@ -1,49 +1,47 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 let
   telegram-desktop = inputs.chaotic.packages.${pkgs.stdenv.hostPlatform.system}.telegram-desktop_git;
   zen-browser = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default;
+
+  homeModules = lib.lists.map (x: lib.path.append ../../modules/home x) [
+    # "haskell"
+    "nix"
+    "plasma"
+    "rust"
+    "spicetify"
+    "starship"
+    # "wezterm"
+    "zed"
+    "zsh"
+  ];
 in
 {
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
+  imports = homeModules;
 
-    extraSpecialArgs = {
-      inherit inputs;
-    };
+  home.username = "xfeusw";
+  home.homeDirectory = "/home/xfeusw";
+  home.stateVersion = "26.11";
 
-    sharedModules = [
-      inputs.chaotic.homeModules.default
+  programs.home-manager.enable = true;
+
+  home.packages =
+    with pkgs;
+    [
+      git
+      helix
+      fastfetch
+      # spotify
+      gh
+      element-desktop
+      nerd-fonts.jetbrains-mono
+    ]
+    ++ [
+      telegram-desktop
+      zen-browser
     ];
-
-    users.xfeusw = {
-      imports = [
-        # ../../modules/home/haskell
-        ../../modules/home/nix
-        ../../modules/home/rust
-        ../../modules/home/spicetify
-        ../../modules/home/starship
-        ../../modules/home/wezterm
-        ../../modules/home/zed
-        ../../modules/home/zsh
-      ];
-
-      home.username = "xfeusw";
-      home.homeDirectory = "/home/xfeusw";
-      home.stateVersion = "26.11";
-
-      programs.home-manager.enable = true;
-
-      home.packages = with pkgs; [
-        git
-        helix
-        fastfetch
-        # spotify
-        gh
-      ] ++ [
-        telegram-desktop
-        zen-browser
-      ];
-    };
-  };
 }

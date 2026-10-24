@@ -10,5 +10,8 @@ in
 
   programs.spicetify = {
     enable = true;
+    enabledCustomApps = with spicePkgs.apps; [
+      marketplace
+    ];
   };
 }
