@@ -20,7 +20,7 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spotify-custom.url = "github:xfeusw/spotify-custom";
 
     space-grotesk.url = "github:xfeusw/space-grotesk-flake";
 
@@ -37,11 +37,9 @@
       chaotic,
       home-manager,
       plasma-manager,
+      spotify-custom,
       ...
     }:
-    let
-      inherit (chaotic.vendored) jovian;
-    in
     {
       nixosConfigurations.hermes = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -55,6 +53,7 @@
           jovian.nixosModules.default
           chaotic.nixosModules.default
           home-manager.nixosModules.home-manager
+          spotify-custom.nixosModules.default
 
           {
             home-manager = {

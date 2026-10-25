@@ -21,6 +21,23 @@
         "type": "github"
       }
     },
+    "dynamic-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792849963,
+        "narHash": "sha256-YvjaKRh4gbg9BDzBL8P3MlfsVctaav3mFAAxFWxRUDM=",
+        "owner": "BotAlejandro",
+        "repo": "spicetify-dynamic-theme",
+        "rev": "df61a24dada0e2d8f6e4c97bf0daaa3770ba0dc4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BotAlejandro",
+        "repo": "spicetify-dynamic-theme",
+        "rev": "df61a24dada0e2d8f6e4c97bf0daaa3770ba0dc4",
+        "type": "github"
+      }
+    },
     "flake-schemas": {
       "locked": {
         "lastModified": 1780327564,
@@ -162,15 +179,18 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1792094642,
-        "narHash": "sha256-LPFRbrCWWyNsdQLO3SX1B/5UMkFK0hfe7bZR6lENvpc=",
-        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
-        "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1093333.fe13242281a6/nixexprs.tar.xz"
+        "lastModified": 1792773339,
+        "narHash": "sha256-rZLrzrC6i+jnTAlvPZHogKDulY7WWDEv9hJeHieO7Zw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "plasma-manager": {
@@ -204,7 +224,7 @@
         "nixpkgs": "nixpkgs_2",
         "plasma-manager": "plasma-manager",
         "space-grotesk": "space-grotesk",
-        "spicetify-nix": "spicetify-nix",
+        "spotify-custom": "spotify-custom",
         "zen-browser": "zen-browser"
       }
     },
@@ -226,9 +246,142 @@
         "type": "github"
       }
     },
+    "spicetify-anonymized-radios": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768840544,
+        "narHash": "sha256-HK3VoXhPnAq0K4fYw4URf3jb7gsqD0tFgPidCe2+Fls=",
+        "owner": "BitesizedLion",
+        "repo": "AnonymizedRadios",
+        "rev": "1c843dcb0a7b43da9932ee1cc9b3557f0a7f8ba6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BitesizedLion",
+        "repo": "AnonymizedRadios",
+        "type": "github"
+      }
+    },
+    "spicetify-better-local-files": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1778668144,
+        "narHash": "sha256-S+rp4naiV87v62wQPX9albyofWvKKbIPx8rrLAk2ffI=",
+        "owner": "Pithaya",
+        "repo": "spicetify-apps-dist",
+        "rev": "bf467fab93e6c1f8b8d4189dc1054bd1cafb3f3a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Pithaya",
+        "ref": "dist/better-local-files",
+        "repo": "spicetify-apps-dist",
+        "type": "github"
+      }
+    },
+    "spicetify-dj-info": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792603752,
+        "narHash": "sha256-1ZpTpOhrIQHr1/cBzWJdW5nf08LPxaioLHkAeq6vsvs=",
+        "owner": "L3-N0X",
+        "repo": "spicetify-dj-info",
+        "rev": "48beac8d5b4e5d2dcbbac6cd4910d4ed10b5387e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "L3-N0X",
+        "repo": "spicetify-dj-info",
+        "type": "github"
+      }
+    },
+    "spicetify-genres": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776030250,
+        "narHash": "sha256-IeW7qjrUe8CI2UshQPD7EJvEGFJElexSjJ1aqDOCYXc=",
+        "owner": "LucasOe",
+        "repo": "spicetify-genres",
+        "rev": "59dd0e75e2dce5da4c525ebed22eb43ab19f3ba3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LucasOe",
+        "repo": "spicetify-genres",
+        "type": "github"
+      }
+    },
+    "spicetify-kamiloo": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790603264,
+        "narHash": "sha256-RTac+VYTtWmywdAfdG+QsDAZ7UPxrJVYv/LlG1marTQ=",
+        "owner": "Kamiloo13",
+        "repo": "spicetify-extensions",
+        "rev": "8a9cdd355aeac8895884b544de08efe2ccfc0cb4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Kamiloo13",
+        "repo": "spicetify-extensions",
+        "type": "github"
+      }
+    },
+    "spicetify-konsl": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792570290,
+        "narHash": "sha256-H24gqwvrWC+D+RQ+xdsU0JtGt/+cmlk1IV/ru2LOGnk=",
+        "owner": "Konsl",
+        "repo": "spicetify-extensions",
+        "rev": "db60731ca9b31adf55c50ff64c83bb2f13d87765",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Konsl",
+        "repo": "spicetify-extensions",
+        "type": "github"
+      }
+    },
+    "spicetify-listening-stats": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792543547,
+        "narHash": "sha256-GDsqruN44fpRQCAG+Rm+EoXEVuixuKKeSKdusMRWZtI=",
+        "owner": "HeadshotInteractive",
+        "repo": "listening-stats",
+        "rev": "76eb591422d81e8a4de5fc70cd81476c88d27fcc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "HeadshotInteractive",
+        "ref": "dist",
+        "repo": "listening-stats",
+        "type": "github"
+      }
+    },
+    "spicetify-lyric-miniplayer": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791571026,
+        "narHash": "sha256-ohB9+aJ8nQ25Yu28CCgV2DGljUQnilIawNer3/Pd24Y=",
+        "owner": "FO-SS",
+        "repo": "Spictify-Lyric-Miniplayer",
+        "rev": "d96a946a7de97f6fe48051a3798bef2d485967f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FO-SS",
+        "repo": "Spictify-Lyric-Miniplayer",
+        "type": "github"
+      }
+    },
     "spicetify-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": [
+          "spotify-custom",
+          "nixpkgs"
+        ],
         "systems": "systems"
       },
       "locked": {
@@ -242,6 +395,51 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
+        "type": "github"
+      }
+    },
+    "spicetify-ohitstom": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792604536,
+        "narHash": "sha256-tGTFLCgKA5o0/ydsCyLN3v2blsLQ50Q5DUcXmkBAIBQ=",
+        "owner": "ohitstom",
+        "repo": "spicetify-extensions",
+        "rev": "ec0013fffb394f50740a0e3d6f590eb3bd752602",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ohitstom",
+        "repo": "spicetify-extensions",
+        "type": "github"
+      }
+    },
+    "spotify-custom": {
+      "inputs": {
+        "dynamic-theme": "dynamic-theme",
+        "nixpkgs": "nixpkgs_4",
+        "spicetify-anonymized-radios": "spicetify-anonymized-radios",
+        "spicetify-better-local-files": "spicetify-better-local-files",
+        "spicetify-dj-info": "spicetify-dj-info",
+        "spicetify-genres": "spicetify-genres",
+        "spicetify-kamiloo": "spicetify-kamiloo",
+        "spicetify-konsl": "spicetify-konsl",
+        "spicetify-listening-stats": "spicetify-listening-stats",
+        "spicetify-lyric-miniplayer": "spicetify-lyric-miniplayer",
+        "spicetify-nix": "spicetify-nix",
+        "spicetify-ohitstom": "spicetify-ohitstom"
+      },
+      "locked": {
+        "lastModified": 1792896345,
+        "narHash": "sha256-F8cse7eiEZdtON6NF6uAqWqqDxTWatCbCwdYEKh6RPE=",
+        "owner": "xfeusw",
+        "repo": "spotify-custom",
+        "rev": "76db9edfa8d2e45665297c737b6b4229b25e3d46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xfeusw",
+        "repo": "spotify-custom",
         "type": "github"
       }
     },

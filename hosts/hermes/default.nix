@@ -38,6 +38,8 @@
     algorithm = "zstd";
   };
 
+  spotify-xfeusw.enable = true;
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "hermes";
@@ -87,6 +89,9 @@
     kdePackages.discover
     kdePackages.krfb
     steam-rom-manager
+    tree
+    spicetify-cli
+    ripgrep
   ];
 
   services.openssh.enable = true;

@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   lib,
+  config,
   ...
 }:
 let
@@ -13,7 +14,7 @@ let
     "nix"
     "plasma"
     "rust"
-    "spicetify"
+    # "spicetify"
     "starship"
     # "wezterm"
     "zed"
@@ -22,6 +23,10 @@ let
 in
 {
   imports = homeModules;
+
+  nix.extraOptions = ''
+    !include ${config.xdg.configHome}/nix/access-tokens.conf
+  '';
 
   home.username = "xfeusw";
   home.homeDirectory = "/home/xfeusw";
