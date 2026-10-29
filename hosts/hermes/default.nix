@@ -9,6 +9,11 @@
     ../../modules/nixos/nix
   ];
 
+  programs = {
+    kdeconnect.enable = true;
+    xwayland.enable = true;
+  };
+
   boot = {
     loader = {
       grub = {
@@ -92,6 +97,7 @@
     tree
     spicetify-cli
     ripgrep
+    alacritty
   ];
 
   services.openssh.enable = true;
