@@ -28,51 +28,44 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    import-tree = "github:denful/import-tree";
+    den = "github:denful/den";
+    with-inputs = "github:denful/with-inputs";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs =
-    inputs@{
-      nixpkgs,
-      jovian,
-      chaotic,
-      home-manager,
-      plasma-manager,
-      spotify-custom,
-      ...
-    }:
-    {
-      nixosConfigurations.hermes = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+  # outputs =
+  #   inputs@{
+  #     nixpkgs,
+  #     jovian,
+  #     chaotic,
+  #     home-manager,
+  #     plasma-manager,
+  #     spotify-custom,
+  #     import-tree,
+  #     ...
+  #   }:
+  #   let
+  #     den =
+  #       (nixpkgs.lib.evalModules {
+  #         modules = [ (import-tree ./modules) ];
+  #         specialArgs.inputs = inputs;
+  #       }).config;
 
-        specialArgs = {
-          inherit inputs;
-        };
+  #     inherit (den.den.hosts.x86_64-linux) hermes;
+  #   in
+  #   {
+  #     nixosConfigurations.hermes = nixosSystem {
+  #       modules = [
+  #         jovian.nixosModules.default
+  #         chaotic.nixosModules.default
+  #         home-manager.nixosModules.home-manager
+  #         spotify-custom.nixosModules.default
+  #         hermes.mainModule
+  #       ];
+  #     };
+  #   };
 
-        modules = [
-          ./hosts/hermes
-          jovian.nixosModules.default
-          chaotic.nixosModules.default
-          home-manager.nixosModules.home-manager
-          spotify-custom.nixosModules.default
-
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-
-              extraSpecialArgs = {
-                inherit inputs;
-              };
-
-              sharedModules = [
-                inputs.chaotic.homeModules.default
-                plasma-manager.homeModules.plasma-manager
-              ];
-
-              users.xfeusw = import ./homes/xfeusw;
-            };
-          }
-        ];
-      };
-    };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
